@@ -1,0 +1,31 @@
+#include<bits/stdc++.h>
+using namespace std;
+int odd[100000];
+int main()
+{
+    // Kak Kak Kak
+    int n , x , o=0 ;
+    unsigned long long z=0;
+    cin>>n;
+    for(int i=0 ; i<n ; i++)
+    {
+        cin>>x;
+        if(x%2==0)
+            z+=x;
+        else
+            odd[o++]=x;
+    }
+    sort(odd , odd + o);
+    if(o%2==0)
+    {
+        for(int i=0 ; i<o ; i++)
+            z+=odd[i];
+    }
+    else
+    {
+        for(int i=1 ; i<o ; i++)
+            z+=odd[i];
+    }
+    cout<<z<<endl;
+	return 0 ;
+}
