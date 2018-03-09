@@ -1,0 +1,25 @@
+#include <iostream>
+#include <string>
+#include <cmath>
+#include <iomanip>
+#include <algorithm>
+using namespace std;
+int main() {
+	string s , l ;
+	cin>>s;
+	cin>>l;
+	for (int i=0 ;i<s.size(); i++)
+	{
+		if (s[i]>='A'&&s[i]<='Z')
+			s[i]+=32;
+		if (l[i]>='A'&&l[i]<='Z')
+			l[i]+=32;
+	}
+	if (s>l)
+		cout<<1<<endl;
+	else if (l>s)
+		cout<<-1<<endl;
+	else
+		cout<<0<<endl;
+	return 0 ;
+}
