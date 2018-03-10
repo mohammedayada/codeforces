@@ -1,0 +1,15 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    // Kak Kak Kak
+     int n , c=0 ;
+     cin>>n;
+     while(n!=0)
+     {
+         c+=(n%2==1);
+         n/=2;
+     }
+     cout<<c<<endl;
+	return 0 ;
+}
