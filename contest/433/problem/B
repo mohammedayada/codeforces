@@ -1,0 +1,46 @@
+#include<bits/stdc++.h>
+#define ayada ios::sync_with_stdio(0);cin.tie(0);cout.tie(0);
+using namespace std;
+unsigned long long arr1[100000] , arr2[100000];
+int main()
+{
+    // Kak Kak Kak
+    ayada
+    int n;
+    cin>>n;
+    for(int i=0 ; i<n  ;i++  )
+    {
+        cin>>arr1[i];
+        arr2[i]=arr1[i];
+    }
+    sort(arr1 , arr1 +n);
+    for(int i=1  ; i<n ;i++)
+    {
+        arr1[i]+=arr1[i-1];
+        arr2[i]+=arr2[i-1];
+    }
+    int q;
+    cin>>q;
+    while(q--)
+    {
+        int a,s,d;
+        cin>>a>>s>>d;
+
+        if(a==1){
+            if(s==1)
+            cout<<arr2[d-1]<<endl;
+            else
+            cout<<arr2[d-1]-arr2[s-2]<<endl;
+        }
+        else{
+            if(s==1)
+            cout<<arr1[d-1]<<endl;
+            else
+            cout<<arr1[d-1]-arr1[s-2]<<endl;
+
+
+        }
+
+    }
+	return 0 ;
+}
