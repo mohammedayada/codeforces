@@ -1,0 +1,66 @@
+//#include<bits/stdc++.h>
+#include <iostream>
+#include <string>
+#include <map>
+#include <deque>
+#include <queue>
+#include <stack>
+#include <sstream>
+#include <iomanip>
+#include <cstdio>
+#include <cmath>
+#include <cstdlib>
+#include <ctime>
+#include <algorithm>
+#include <vector>
+#include <set>
+#include <complex>
+#include <list>
+#include <climits>
+#include <cctype>
+#include <bitset>
+
+using namespace std;
+#define all(v)          ((v).begin()), ((v).end())
+#define pb push_back
+#define ayada ios::sync_with_stdio(0);cin.tie(0);cout.tie(0);
+#define clr(v,d)        memset(v, d, sizeof(v))
+const double EPS = 1e-12;
+const double PI = 3.14159265359;
+typedef long long ll;
+const ll mod = ll(1e9 + 7);
+using namespace std;
+int count_ones(int val)
+{
+
+	int ret=0;
+	while(val>0)
+	{
+		ret++;
+		val=val&(val-1);
+	}
+	return ret;
+}
+int arr[100001], a[100001];
+int main()
+{
+    // Kak Kak Kak
+    ayada
+    int n , m ;
+    set<int>s;
+    cin>>n>>m;
+    for(int i=0 ; i<n ; i++)
+        cin>>arr[i];
+    for(int i=n-1 ; i>=0 ; i--)
+    {
+        s.insert(arr[i]);
+        a[i]=s.size();
+    }
+    while(m--)
+    {
+        int x;
+        cin>>x;
+        cout<<a[x-1]<<endl;
+    }
+	return 0;
+}
